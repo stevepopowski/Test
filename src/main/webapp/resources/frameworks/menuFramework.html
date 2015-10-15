@@ -1,0 +1,59 @@
+<nav>
+		<ul class="sf-menu" id="example">
+			<li><a href="home">Home</a></li>
+			<li><a href="#">Carrier Ethernet Services</a>
+				<ul>
+					<li><a href="#">Inventory</a>
+						<ul>
+							<li><a target="_blank" href="mesummary?type=CES">Managed Element Summary</a></li>
+							<li><a target="_blank" href="mefservicesummary">Services</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Provision</a>
+						<ul>
+							<li><a target="_blank" href="mefprovision"> Create Service</a></li>
+						<!--  <li><a target="_blank" href="l2cptemplate">L2CP Templates</a></li> -->
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<!---
+			<li><a href="#">Optical Wavelength Services</a>
+				<ul>
+					<li><a href="#">Summary Table Queries</a>
+						<ul>
+							<li><a target="_blank" href="mesummary?type=OWS">Managed Element Summary</a></li>
+							<li><a target="_blank" href="owstopolinksummary">Link Summary</a></li>
+							<li><a target="_blank" href="sncsummary">Subnetwork Summary</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Provisioning</a>
+						<ul>
+							<li><a target="_blank" href="createsnc">createAndActivateSNC</a></li>
+							<li><a href="#">deactivateAndDeleteSNC</a></li>
+							<li><a href="#">modifySNC</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			--->
+			<security:authorize access="hasRole('ROLE_ADMINISTRATOR')">			
+			<li><a href="">Admin</a>
+				<ul>
+					<li><a href="eventLogSummary">Event Log</a></li>			
+					<li><a href="userSummary">Users</a></li>			
+				</ul>
+			</li>
+			</security:authorize>
+			
+			<li><a href="">About</a>
+				<ul>
+<!-- 					<li><a href="versionsummary">Version Info</a></li>			 -->
+					<li><a href="contact">Contact Us</a></li>
+<!-- 					<li><a target="_blank" href="sdoc.jsp">API Docs</a></li> -->
+				</ul>
+			</li>
+<!-- 			<li><a href="logout">Logout</a></li> -->
+
+		</ul>
+	</nav>

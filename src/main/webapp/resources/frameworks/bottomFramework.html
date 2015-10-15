@@ -1,0 +1,20 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+
+<jsp:useBean id="date" class="java.util.Date" />
+
+	    <footer id="footer">
+		    <span style="margin-left:10px;vertical-align:bottom;color:#E45626">
+		    <security:authorize access="isAuthenticated()">
+		    	You are logged in as <b><security:authentication property="principal.username"/></b>
+			</security:authorize>
+		    </span>
+	
+		    <span style="margin-right:10px;float:right;font-size:10px;text-align:bottom;color:#E45626">
+		    <b style="vertical-align:bottom; margin-left: 3px;">&copy; <fmt:formatDate value="${date}" pattern="yyyy" /> Ciena Corporation. All rights reserved.</b>
+		    </span>     
+	    </footer>
+	</div>
+
+	</body>
+</html>
